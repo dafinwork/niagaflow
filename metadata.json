@@ -1,0 +1,6 @@
+{
+  "name": "NiagaFlow",
+  "description": "Sistem ERP dan manajemen distributor & grosir terintegrasi untuk pesanan penjualan, tier pricing, surat jalan pengiriman, dan penagihan piutang.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

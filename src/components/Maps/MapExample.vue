@@ -11,6 +11,20 @@ export default {
   mounted() {
     let google = window.google;
     let map = document.getElementById("map-canvas");
+    if (!google || !google.maps) {
+      if (map) {
+        map.innerHTML = `
+          <div class="flex flex-col items-center justify-center h-full bg-blueGray-100 text-blueGray-600 rounded p-8 text-center">
+            <i class="fas fa-map-location-dot text-4xl mb-3 text-emerald-500"></i>
+            <h4 class="text-lg font-bold">Peta Wilayah & Rute Logistik NiagaFlow</h4>
+            <p class="text-sm max-w-md mt-1 text-blueGray-500">
+              Integrasi Google Maps aktif. Tambahkan Google Maps API key valid pada index.html untuk memuat peta satelit langsung.
+            </p>
+          </div>
+        `;
+      }
+      return;
+    }
     let lat = map.getAttribute("data-lat");
     let lng = map.getAttribute("data-lng");
 
